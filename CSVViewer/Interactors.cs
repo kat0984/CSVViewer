@@ -7,10 +7,10 @@ using System.Collections;
 
 namespace CSVViewer
 {
-    class Interactors
+    public class Interactors
     {
-        List<List<string>> RecordsArray = new List<List<string>>();
-        int CurrentPage = 0;
+        public List<List<string>> RecordsArray = new List<List<string>>();
+        public int currentPage = 0;
 
         public string GetFileName(string name)
         {
@@ -46,22 +46,93 @@ namespace CSVViewer
             }
         }
 
-        public List<string> FilterFirstPage()
+        public List<List<string>> FilterFirstPage()
         {
             int counter;
-            List<string> result = new List<string>();
+            List<string> resultlist = new List<string>();
+            List<List<string>> result = new List<List<string>>();
             int max;
-            if(RecordsArray.Count < 12)
+            if(RecordsArray.Count < 11)
             {
                 max = RecordsArray.Count;
             }
             else
             {
-                max = 12;
+                max = 11;
             }
             for (counter = 0; counter < max; counter++)
             {
-                result.Add(RecordsArray[counter].ToString());
+                resultlist = RecordsArray[counter];
+                result.Add(resultlist);
+            }
+            return result;
+        }
+
+        public List<List<string>> FilterNextPage()
+        {
+            int counter;
+            List<string> resultlist = new List<string>();
+            List<List<string>> result = new List<List<string>>();
+            int max;
+            int max_;
+            max_ = 11 + currentPage;
+            if (RecordsArray.Count < max_)
+            {
+                max = RecordsArray.Count;
+            }
+            else
+            {
+                max = max_;
+            }
+            resultlist = RecordsArray[0];
+            result.Add(resultlist);
+            for (counter = currentPage; counter < max - 1; counter++)
+            {
+                resultlist = RecordsArray[counter];
+                result.Add(resultlist);
+            }
+            return result;
+        }
+
+        public List<List<string>> FilterPreviousPage()
+        {
+            int counter;
+            List<string> resultlist = new List<string>();
+            List<List<string>> result = new List<List<string>>();
+            int max;
+            int max_;
+            max_ = currentPage + 11;
+            if (RecordsArray.Count < max_)
+            {
+                max = RecordsArray.Count;
+            }
+            else
+            {
+                max = max_;
+            }
+            resultlist = RecordsArray[0];
+            result.Add(resultlist);
+            for (counter = currentPage; counter < max - 1; counter++)
+            {
+                resultlist = RecordsArray[counter];
+                result.Add(resultlist);
+            }
+            return result;
+        }
+
+        public List<List<string>> FilterLastPage()
+        {
+            int counter;
+            List<string> resultlist = new List<string>();
+            List<List<string>> result = new List<List<string>>();
+            int max = RecordsArray.Count;
+            
+            resultlist = RecordsArray[0];
+            result.Add(resultlist);
+            for (counter = RecordsArray.Count - 10; counter < max; counter++)
+            {
+                resultlist = RecordsArray[counter];
+                result.Add(resultlist);
             }
             return result;
         }

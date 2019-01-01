@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVViewer", "CSVViewer\CSVViewer.csproj", "{DF298DAE-7FC4-4765-BCB3-F92801E5F942}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVViewerTest", "CSVViewerTest\CSVViewerTest.csproj", "{D2822D2B-5774-48A5-A9DD-DECD9A9EEE51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVViewerTest", "CSVViewerTest\CSVViewerTest.csproj", "{6355F00C-18BD-40CC-AF82-6DA70E3C37FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{DF298DAE-7FC4-4765-BCB3-F92801E5F942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF298DAE-7FC4-4765-BCB3-F92801E5F942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF298DAE-7FC4-4765-BCB3-F92801E5F942}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2822D2B-5774-48A5-A9DD-DECD9A9EEE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2822D2B-5774-48A5-A9DD-DECD9A9EEE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2822D2B-5774-48A5-A9DD-DECD9A9EEE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2822D2B-5774-48A5-A9DD-DECD9A9EEE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6355F00C-18BD-40CC-AF82-6DA70E3C37FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6355F00C-18BD-40CC-AF82-6DA70E3C37FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6355F00C-18BD-40CC-AF82-6DA70E3C37FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6355F00C-18BD-40CC-AF82-6DA70E3C37FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
